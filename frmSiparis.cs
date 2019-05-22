@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
-namespace Lokanta_Otomasyonu
+namespace lokanta
 {
     public partial class frmSiparis : Form
     {
@@ -17,79 +18,10 @@ namespace Lokanta_Otomasyonu
         {
             InitializeComponent();
         }
-
+        
 
         //Hesap Makinesi
         int tableId; int AdditionId;
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Murat gönderince kontorl et
-            lblMasaNo.Text = cGenel.ButtonValue;
-
-            cMasalar ms = new cMasalar();
-            tableId = ms.TableGetbyNumber(cGenel._ButtonName);
-            if (ms.TableGetbyState(tableId, 2) == true)
-            {
-                cAdisyon Ad = new cAdisyon();
-                AdditionId = Ad.getByAddition(tableId);
-                cSiparis orders = new cSiparis();
-                orders.getByOrder(lvSiparisler, AdditionId);
-            }
-            // Buraya kadar kontrol et
-
-            btn1.Click += new EventHandler(islem);
-            btn2.Click += new EventHandler(islem);
-            btn3.Click += new EventHandler(islem);
-            btn4.Click += new EventHandler(islem);
-            btn5.Click += new EventHandler(islem);
-            btn6.Click += new EventHandler(islem);
-            btn7.Click += new EventHandler(islem);
-            btn8.Click += new EventHandler(islem);
-            btn9.Click += new EventHandler(islem);
-            btn0.Click += new EventHandler(islem);
-
-        }
-        void islem(Object sender, EventArgs e)
-        {
-            Button btn = sender as Button;
-            switch (btn.Name)
-            {
-                case "btn1":
-                    txtAdet.Text += (1).ToString();
-                    break;
-                case "btn2":
-                    txtAdet.Text += (2).ToString();
-                    break;
-                case "btn3":
-                    txtAdet.Text += (3).ToString();
-                    break;
-                case "btn4":
-                    txtAdet.Text += (4).ToString();
-                    break;
-                case "btn5":
-                    txtAdet.Text += (5).ToString();
-                    break;
-                case "btn6":
-                    txtAdet.Text += (6).ToString();
-                    break;
-                case "btn7":
-                    txtAdet.Text += (7).ToString();
-                    break;
-                case "btn8":
-                    txtAdet.Text += (8).ToString();
-                    break;
-                case "btn9":
-                    txtAdet.Text += (9).ToString();
-                    break;
-                case "btn0":
-                    txtAdet.Text += (0).ToString();
-                    break;
-                default:
-                    MessageBox.Show("Sayı Gir");
-                    break;
-            }
-
-        }
 
         cUrunCesitleri Uc = new cUrunCesitleri();
 
@@ -175,30 +107,31 @@ namespace Lokanta_Otomasyonu
              3 - Masa Rezerve
              4 - Dolu Rezerve
             */
+            
             cMasalar masa = new cMasalar();
             frmMasalar ms = new frmMasalar();
             cAdisyon newAddition = new cAdisyon();
             cSiparis saveOrder = new cSiparis();
            
             bool sonuc = false;
-            if (masa.TableGetbyState(tableId, 1) == true)
+            if (masa.TableGetbyState(tableId, 1) == true)     
             {
                 newAddition.ServisTurNo = 1;
                 
 
-                newAddition.PersonelId = 1;
+                newAddition.PersonalId = 1;
                 newAddition.MasaId = tableId;
-                newAddition.Tarih = DataTime.Now;
+                newAddition.Tarih = DateTime.Now;
                 sonuc = newAddition.setByAdditionNew(newAddition);
-                masa.setChangeTableState(cGenel.ButtonName, 2);
+                masa.setChangeTableState(cGenel._ButtonName, 2);        
 
                 if (lvSiparisler.Items.Count > 0)
                 {
-                    for (int = 0; i < lvSiparisler.Items.Count; i++)
+                    for (int i= 0; i < lvSiparisler.Items.Count; i++)
                     {
                         saveOrder.MasaId = tableId;
                         saveOrder.UrunId = Convert.ToInt32(lvSiparisler.Items[i].SubItems[2].Text);
-                        saveOrder.AdisyonID = newAddition.getByAddition(tabelId);
+                        saveOrder.AdisyonID = newAddition.getByAddition(tableId); 
                         saveOrder.Adet = Convert.ToInt32(lvSiparisler.Items[i].SubItems[1].Text);
                         saveOrder.setSaveOrder(saveOrder);
                     }
@@ -207,7 +140,7 @@ namespace Lokanta_Otomasyonu
                     
                 }
             }
-            else if (masa.TableGetbyState(tableId, 2) == true || masa.TableGetbyState(tableId, 4) == true)
+            else if (masa.TableGetbyState(tableId, 2) == true || masa.TableGetbyState(tableId, 4) == true)      
             {
                 
                 if (lvYeniEklenenler.Items.Count > 0)
@@ -216,40 +149,44 @@ namespace Lokanta_Otomasyonu
                     {
                         saveOrder.MasaId = tableId;
                         saveOrder.UrunId = Convert.ToInt32(lvSiparisler.Items[i].SubItems[1].Text);
-                        saveOrder.AdisyonID = newAddition.getByAddition(tabelId);
+                        saveOrder.AdisyonID = newAddition.getByAddition(tableId);
                         saveOrder.Adet = Convert.ToInt32(lvSiparisler.Items[i].SubItems[2].Text);
                         saveOrder.setSaveOrder(saveOrder);
-                    }
-                    cGenel._AdisyonId = Convert.ToString(newAddition.getByAddition(tabelId));
+                    } 
+                    cGenel._AdisyonId = Convert.ToString(newAddition.getByAddition(tableId));      
                 }
                 if (silinler.Count > 0)
                 {
                     foreach (string item in silinler)
                     {
-                        saveOrder.set.DeleteOrder(Convert.ToInt32(item));
+                        saveOrder.setDeleteOrder(Convert.ToInt32(item));     // bilemedim
+                      
+
+
+
                     }
                 }
 
                 this.Close();
                 ms.Show();
             }
-            else if (masa.TableGetbyState(tableId, 3) == true )
+            else if (masa.TableGetbyState(tableId, 3) == true)      
             {
                 
                 newAddition.ServisTurNo = 1;
-                newAddition.PersonelId = 1;
+                newAddition.PersonalId = 1;
                 newAddition.MasaId = tableId;
-                newAddition.Tarih = DataTime.Now;
+                newAddition.Tarih = DateTime.Now;
                 sonuc = newAddition.setByAdditionNew(newAddition);
-                masa.setChangeTableState(cGenel._ButtonName, 4);
+                masa.setChangeTableState(cGenel._ButtonName, 4);      
 
                 if (lvSiparisler.Items.Count > 0)
                 {
-                    for (int = 0; i < lvSiparisler.Items.Count; i++)
+                    for (int i = 0; i < lvSiparisler.Items.Count; i++)
                     {
                         saveOrder.MasaId = tableId;
                         saveOrder.UrunId = Convert.ToInt32(lvSiparisler.Items[i].SubItems[2].Text);
-                        saveOrder.AdisyonID = newAddition.getByAddition(tabelId);
+                        saveOrder.AdisyonID = newAddition.getByAddition(tableId);
                         saveOrder.Adet = Convert.ToInt32(lvSiparisler.Items[i].SubItems[1].Text);
                         saveOrder.setSaveOrder(saveOrder);
                     }
@@ -291,9 +228,10 @@ namespace Lokanta_Otomasyonu
         
 
         //cMasalar'a bu metodu ekle.
-
+        /*
         public void setChangeTableState(string ButonName, int state)
         {
+            cGenel gnl = new cGenel();
             SqlConnection con = new SqlConnection(gnl.conString);
             SqlCommand cmd = new SqlCommand("Update masalar Set DURUM=@Durum where ID=@MasaNo ", con);
 
@@ -303,12 +241,13 @@ namespace Lokanta_Otomasyonu
             }
             string aa = ButonName;
             int uzunluk = aa.Length;
-            cmd.Parameters.Add("@Durum", sqlDbType.Int).Value = state;
-            cmd.Parameters.Add("@MasaNo", sqlDbType.Int).Value = aa.Substring(uzunluk - 1, 1);
+            cmd.Parameters.Add("@durum", SqlDbType.Int).Value = state;
+            cmd.Parameters.Add("@MasaNo", SqlDbType.Int).Value = aa.Substring(uzunluk - 1, 1);
             cmd.ExecuteNonQuery();
             con.Dispose();
             con.Close();
-        }
+        } 
+        */
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
@@ -325,48 +264,97 @@ namespace Lokanta_Otomasyonu
 
         private void btnOdeme_Click(object sender, EventArgs e)
         {
-            cGenel._ServisTurNo = 1;
+            cGenel._ServisTurNo = 1;           
             cGenel._AdisyonId = AdditionId.ToString();
             frmBill frm = new frmBill();
+            
             this.Close();
             frm.Show();
         }
 
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        private void İslem(object sender, EventArgs e)
+      
+       
+        void islem(Object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            switch (btn.Name)
+            {
+                case "btn1":
+                    txtAdet.Text += (1).ToString();
+                    break;
+                case "btn2":
+                    txtAdet.Text += (2).ToString();
+                    break;
+                case "btn3":
+                    txtAdet.Text += (3).ToString();
+                    break;
+                case "btn4":
+                    txtAdet.Text += (4).ToString();
+                    break;
+                case "btn5":
+                    txtAdet.Text += (5).ToString();
+                    break;
+                case "btn6":
+                    txtAdet.Text += (6).ToString();
+                    break;
+                case "btn7":
+                    txtAdet.Text += (7).ToString();
+                    break;
+                case "btn8":
+                    txtAdet.Text += (8).ToString();
+                    break;
+                case "btn9":
+                    txtAdet.Text += (9).ToString();
+                    break;
+                case "btn0":
+                    txtAdet.Text += (0).ToString();
+                    break;
+                default:
+                    MessageBox.Show("Sayı Gir");
+                    break;
+            }
+        }
+        private void frmSiparis_Load(object sender, EventArgs e)
+        {
+            // Murat gönderince kontorl et
+            lblMasaNo.Text = cGenel._ButtonValue;
 
+            cMasalar ms = new cMasalar();
+            tableId = ms.TableGetbyNumber(cGenel._ButtonName);
+            if (ms.TableGetbyState(tableId, 2) == true)
+            {
+                cAdisyon Ad = new cAdisyon();
+                AdditionId = Ad.getByAddition(tableId);
+                cSiparis orders = new cSiparis();
+                orders.getByOrder(lvSiparisler, AdditionId);
+            }
+            // Buraya kadar kontrol et
+            // Buraya kadar kontrol et
+
+            btn1.Click += new EventHandler(islem);
+            btn2.Click += new EventHandler(islem);
+            btn3.Click += new EventHandler(islem);
+            btn4.Click += new EventHandler(islem);
+            btn5.Click += new EventHandler(islem);
+            btn6.Click += new EventHandler(islem);
+            btn7.Click += new EventHandler(islem);
+            btn8.Click += new EventHandler(islem);
+            btn9.Click += new EventHandler(islem);
+            btn0.Click += new EventHandler(islem);
         }
 
+        private void btnGeriDon_Click(object sender, EventArgs e)
+        {
+           frmMasalar frm = new frmMasalar();
+            this.Close();
+            frm.Show();
+        }
 
-
-
-
-        
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Uyarı!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            { Application.Exit(); }
+        }
     }
-}
+    }
+

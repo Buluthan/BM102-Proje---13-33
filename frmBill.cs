@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lokanta_Otomasyonu
+namespace lokanta
 {
     public partial class frmBill : Form
     {
@@ -19,7 +19,7 @@ namespace Lokanta_Otomasyonu
 
         private void btnGeriDon_Click(object sender, EventArgs e)
         {
-            frmMenu frm = new frmMenu();
+            frmSiparis frm = new frmSiparis();
             this.Close();
             frm.Show();
         }
@@ -38,7 +38,7 @@ namespace Lokanta_Otomasyonu
         {
             if (cGenel._ServisTurNo == 1)
             {
-                lblAdisyonId.Text = cGenel.AdisyonId;
+                lblAdisyonId.Text = cGenel._AdisyonId ;
                 txtIndirimTutari.TextChanged += new EventHandler(txtIndirimTutari_TextChanged);
                 cs.getByOrder(lvUrunler, Convert.ToInt32(lblAdisyonId.Text));
                 if (lvUrunler.Items.Count > 0)
@@ -61,7 +61,7 @@ namespace Lokanta_Otomasyonu
             }
             else if (cGenel._ServisTurNo == 2)
             {
-                lblAdisyonId.Text = cGenel.AdisyonId;
+                lblAdisyonId.Text = cGenel._AdisyonId;
                 txtIndirimTutari.TextChanged += new EventHandler(txtIndirimTutari_TextChanged);
                 cs.getByOrder(lvUrunler, Convert.ToInt32(lblAdisyonId.Text));
 

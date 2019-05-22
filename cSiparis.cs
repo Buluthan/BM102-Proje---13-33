@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Lokanta_Otomasyonu
+namespace lokanta
 {
     class cSiparis
     {
@@ -101,10 +101,10 @@ namespace Lokanta_Otomasyonu
                     con.Open();
                 }
 
-                cmd.Parameters.Add("@AdsiyonNo", sqlDbType.Int).Value = Bilgiler.AdisyonID;
-                cmd.Parameters.Add("@UrunId", sqlDbType.Int).Value = Bilgiler.UrunId;
-                cmd.Parameters.Add("@Adet", sqlDbType.Int).Value = Bilgiler.adet;
-                cmd.Parameters.Add("@masaId", sqlDbType.Int).Value = Bilgiler.masaId;
+                cmd.Parameters.Add("@AdsiyonNo", SqlDbType.Int).Value =Bilgiler._adisyonID;
+                cmd.Parameters.Add("@UrunId", SqlDbType.Int).Value = Bilgiler._urunId;
+                cmd.Parameters.Add("@Adet", SqlDbType.Int).Value = Bilgiler._adet;        // BUNLARI DA KONTROL ET Bilgiler._Adet mi olacak diye
+                cmd.Parameters.Add("@masaId", SqlDbType.Int).Value = Bilgiler._masaId;
                 sonuc = Convert.ToBoolean(cmd.ExecuteNonQuery());
             }
             catch (SqlException ex)
@@ -126,7 +126,7 @@ namespace Lokanta_Otomasyonu
             SqlConnection con = new SqlConnection(gnl.conString);
             SqlCommand cmd = new SqlCommand("Delete From Satislar Where ID=@SatisID", con);
 
-            cmd.Parameters.Add("@SatisID", sqlDbType.Int).Value = satisId;
+            cmd.Parameters.Add("@SatisID", SqlDbType.Int).Value = satisId;
 
             if (con.State == ConnectionState.Closed)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace Lokanta_Otomasyonu
+namespace lokanta
 {
     class cAdisyon
     {
@@ -68,7 +68,7 @@ namespace Lokanta_Otomasyonu
         public int getByAddition(int MasaId)
         {
             SqlConnection con = new SqlConnection(gnl.conString);
-            SqlCommand cmd = new SqlCommand("Select top 1 ID From Adisyon Where MASAID=@MasaId Order by ID desc", con);
+            SqlCommand cmd = new SqlCommand("Select top 1 ID From Adisyonlar Where MASAID=@MasaId Order by ID desc", con);
 
             cmd.Parameters.Add("@MasaId", SqlDbType.Int).Value = MasaId;
             try
@@ -105,9 +105,9 @@ namespace Lokanta_Otomasyonu
                     con.Open();
                 }
 
-                cmd.Parameters.Add("@ServisTurNo", SqlDbType.Int).Value = Bilgiler.ServisTurNo;
-                cmd.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = Bilgiler.Tarih;
-                cmd.Parameters.Add("@PersonalID", SqlDbType.Int).Value = Bilgiler.PersonalID;
+                cmd.Parameters.Add("@ServisTurNo", SqlDbType.Int).Value =Bilgiler.ServisTurNo;
+                cmd.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = Bilgiler.Tarih;  
+                cmd.Parameters.Add("@PersonalID", SqlDbType.Int).Value = Bilgiler.PersonalId;     // bunlara bir bak _PersonelID  mi olcak diye
                 cmd.Parameters.Add("@MasaId", SqlDbType.Int).Value = Bilgiler.MasaId;
                 cmd.Parameters.Add("@Durum", SqlDbType.Bit).Value = 0;
                 sonuc = Convert.ToBoolean(cmd.ExecuteNonQuery());
@@ -115,7 +115,7 @@ namespace Lokanta_Otomasyonu
             catch (SqlException ex)
             {
                 string hata = ex.Message;
-            }
+            } 
             finally
             {
                 con.Dispose();
