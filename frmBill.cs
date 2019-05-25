@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace lokanta
@@ -28,7 +29,7 @@ namespace lokanta
         {
             if (MessageBox.Show("Çıkmak İstediğinizde Emin Misiniz?", "Uyarı !!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                Application.Exit(); 
+                Application.Exit();
             }
         }
 
@@ -38,7 +39,7 @@ namespace lokanta
         {
             if (cGenel._ServisTurNo == 1)
             {
-                lblAdisyonId.Text = cGenel._AdisyonId ;
+                lblAdisyonId.Text = cGenel._AdisyonId;
                 txtIndirimTutari.TextChanged += new EventHandler(txtIndirimTutari_TextChanged);
                 cs.getByOrder(lvUrunler, Convert.ToInt32(lblAdisyonId.Text));
                 if (lvUrunler.Items.Count > 0)
@@ -137,9 +138,123 @@ namespace lokanta
 
             }
 
-            decimal kdv = Convert.ToDecimal(lblOdenecek.Text) * 18/100;
+            decimal kdv = Convert.ToDecimal(lblOdenecek.Text) * 18 / 100;
             lblKdv.Text = string.Format("{0:0.000}", kdv);
         }
 
+        cMasalar masalar = new cMasalar();
+        cRezervasyon rezerve = new cRezervasyon(); //
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (cGenel._ServisTurNo == 1)
+            {
+                int masaid = masalar.TableGetbyNumber(cGenel._ButtonName);
+                int musteriId = 0;
+                if (masalar.TableGetbyState(masaid, 4) == true)
+                {
+                    musteriId = rezerve.getByClientIdFromRezervasyon(masaid);
+                }
+                else
+                {
+                    musteriId = 1;
+                }
+                int odemeTurId = 0;
+                if (rbNakit.Checked)
+                {
+                    odemeTurId = 1;
+                }
+                if (rbKrediKarti.Checked)
+                {
+                    odemeTurId = 2;
+                }
+                if (rbTicket.Checked)
+                {
+                    odemeTurId = 3;
+                }
+                cOdeme odeme = new cOdeme();
+
+
+                //ADISYONID,ODEMETURID,MUSTERIID,ARATOPLAM,KDVTUTARI,TOPLAMTUTAR,INDIRIM
+
+                odeme.AdisyonID = Convert.ToInt32(lblAdisyonId.Text);
+                odeme.OdemeTurId = odemeTurId;
+                odeme.MusteriId = musteriId;
+                odeme.AraToplam = Convert.ToDecimal(lblOdenecek.Text);
+                odeme.Kdvtutari = Convert.ToDecimal(lblKdv.Text);
+                odeme.GenelToplam = Convert.ToDecimal(lblToplamTutar.Text);
+                odeme.Indirim = Convert.ToDecimal(lblIndirim.Text);
+
+
+                bool result = odeme.billClose(odeme);
+                if (result)
+                {
+                    MessageBox.Show("Hesap Kapatılmıştır.");
+                    masalar.setChangeTableState(Convert.ToString(masaid), 1);
+
+                    cRezervasyon c = new cRezervasyon();
+                    c.rezervationclose(Convert.ToInt32(lblAdisyonId.Text));
+
+                    cAdisyon a = new cAdisyon();
+                    a.adisyonkapat(Convert.ToInt32(lblAdisyonId.Text), 0);
+
+                    this.Close();
+                    frmMasalar frm = new frmMasalar();
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Hesap Kapatılırken Bir Hata Oluştu. Lütfen Yetkililere bildirniz.");
+                }
+            }
+        }
+        cGenel gnl = new cGenel();
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(gnl.conString);
+            SqlCommand cmd = new SqlCommand("Select DURUM,ID from masalar", con);
+            SqlDataReader dr = null;
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                foreach (Control item in this.Controls)
+                {
+                    if (item is Button)
+                    {
+                        if (item.Name == "btnMasa" + dr["ID"].ToString() && dr["DURUM"].ToString() == "2")  //gelen masa1 ve durumu 1 ise işlemidir
+                                                                                                            // durum 1 boş demek
+                                                                                                            // durum 2 dolu demek
+                        {
+                            // bos masa resmi kısım
+                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tablebos1);  //burda hata alıyoz video 12
+                        }
+                        else if (item.Name == "btnMasa" + dr["ID"].ToString() && dr["DURUM"].ToString() == "2")
+                        {
+                            cMasalar ms = new cMasalar();
+                            //  DateTime dt1 = Convert.ToDateTime(ms.SessionSum(2,dr["ID"].ToString()));
+                            //    DateTime dt2 = DateTime.Now;
+                            //     string st1 = Convert.ToDateTime(ms.SessionSum(2, dr["ID"].ToString())).ToShortTimeString();
+                            //     string st2 = DateTime.Now.ToShortDateString();
+                            //     DateTime t1 = dt1.AddMinutes(DateTime.Parse(st1).TimeOfDay.TotalMinutes);
+                            //     DateTime t2= dt2.AddMinutes(DateTime.Parse(st2).TimeOfDay.TotalMinutes);
+                            //     var fark = t2 - t1;
+
+                            //       item.Text = string.Format("{0}{1}{2}",
+                            //        fark.Days > 0 ? string.Format("{0} gün", fark.Days) : "",
+                            //       fark.Hours > 0 ? string.Format("{0} Saat", fark.Hours) : "",
+                            //          fark.Minutes > 0 ? string.Format("{0} Dakika", fark.Minutes) : "").Trim() + "\n\n\nMasa" + dr["ID"].ToString();
+                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tabledolu1);
+                            //    item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.dolumasa);   // dolu resmi
+                        }
+                    }
+                }
+            }
+            frmMasalar frm = new frmMasalar();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

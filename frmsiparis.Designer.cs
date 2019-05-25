@@ -78,6 +78,7 @@
             this.btnGeriDon = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,7 +87,7 @@
             // lblMasaNo
             // 
             this.lblMasaNo.AutoSize = true;
-            this.lblMasaNo.Location = new System.Drawing.Point(48, 9);
+            this.lblMasaNo.Location = new System.Drawing.Point(136, 44);
             this.lblMasaNo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblMasaNo.Name = "lblMasaNo";
             this.lblMasaNo.Size = new System.Drawing.Size(79, 24);
@@ -95,103 +96,119 @@
             // 
             // btnAnaYemek1
             // 
+            this.btnAnaYemek1.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnaYemek1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnaYemek1.BackgroundImage")));
+            this.btnAnaYemek1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnaYemek1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAnaYemek1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAnaYemek1.Location = new System.Drawing.Point(6, 33);
             this.btnAnaYemek1.Name = "btnAnaYemek1";
             this.btnAnaYemek1.Size = new System.Drawing.Size(113, 63);
             this.btnAnaYemek1.TabIndex = 0;
-            this.btnAnaYemek1.Text = "Ana Yemek";
-            this.btnAnaYemek1.UseVisualStyleBackColor = true;
+            this.btnAnaYemek1.UseVisualStyleBackColor = false;
             this.btnAnaYemek1.Click += new System.EventHandler(this.btnAnaYemek1_Click);
             // 
             // btnCorba2
             // 
+            this.btnCorba2.BackColor = System.Drawing.Color.Transparent;
+            this.btnCorba2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCorba2.BackgroundImage")));
+            this.btnCorba2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCorba2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCorba2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCorba2.Location = new System.Drawing.Point(125, 33);
             this.btnCorba2.Name = "btnCorba2";
             this.btnCorba2.Size = new System.Drawing.Size(113, 63);
             this.btnCorba2.TabIndex = 0;
-            this.btnCorba2.Text = "Çorbalar";
-            this.btnCorba2.UseVisualStyleBackColor = true;
+            this.btnCorba2.UseVisualStyleBackColor = false;
             this.btnCorba2.Click += new System.EventHandler(this.btnCorba2_Click);
             // 
             // btnSalata3
             // 
+            this.btnSalata3.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalata3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalata3.BackgroundImage")));
+            this.btnSalata3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalata3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalata3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSalata3.Location = new System.Drawing.Point(6, 102);
             this.btnSalata3.Name = "btnSalata3";
             this.btnSalata3.Size = new System.Drawing.Size(113, 63);
             this.btnSalata3.TabIndex = 0;
-            this.btnSalata3.Text = "Salatalar";
-            this.btnSalata3.UseVisualStyleBackColor = true;
+            this.btnSalata3.UseVisualStyleBackColor = false;
             this.btnSalata3.Click += new System.EventHandler(this.btnSalata3_Click);
             // 
             // btnİcecek4
             // 
+            this.btnİcecek4.BackColor = System.Drawing.Color.Transparent;
+            this.btnİcecek4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnİcecek4.BackgroundImage")));
+            this.btnİcecek4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnİcecek4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnİcecek4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnİcecek4.Location = new System.Drawing.Point(125, 102);
             this.btnİcecek4.Name = "btnİcecek4";
             this.btnİcecek4.Size = new System.Drawing.Size(113, 63);
             this.btnİcecek4.TabIndex = 0;
-            this.btnİcecek4.Text = "İçecekler";
-            this.btnİcecek4.UseVisualStyleBackColor = true;
+            this.btnİcecek4.UseVisualStyleBackColor = false;
             this.btnİcecek4.Click += new System.EventHandler(this.btnİcecek4_Click);
             // 
             // btnTatlilar5
             // 
+            this.btnTatlilar5.BackColor = System.Drawing.Color.Transparent;
+            this.btnTatlilar5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTatlilar5.BackgroundImage")));
+            this.btnTatlilar5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTatlilar5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTatlilar5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTatlilar5.Location = new System.Drawing.Point(6, 171);
             this.btnTatlilar5.Name = "btnTatlilar5";
             this.btnTatlilar5.Size = new System.Drawing.Size(113, 63);
             this.btnTatlilar5.TabIndex = 0;
-            this.btnTatlilar5.Text = "Tatlılar";
-            this.btnTatlilar5.UseVisualStyleBackColor = true;
+            this.btnTatlilar5.UseVisualStyleBackColor = false;
             this.btnTatlilar5.Click += new System.EventHandler(this.btnTatlilar5_Click);
             // 
             // btnKahvalti6
             // 
+            this.btnKahvalti6.BackColor = System.Drawing.Color.Transparent;
+            this.btnKahvalti6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKahvalti6.BackgroundImage")));
+            this.btnKahvalti6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKahvalti6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnKahvalti6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKahvalti6.Location = new System.Drawing.Point(125, 171);
             this.btnKahvalti6.Name = "btnKahvalti6";
             this.btnKahvalti6.Size = new System.Drawing.Size(113, 63);
             this.btnKahvalti6.TabIndex = 0;
-            this.btnKahvalti6.Text = "Kahvaltı";
-            this.btnKahvalti6.UseVisualStyleBackColor = true;
+            this.btnKahvalti6.UseVisualStyleBackColor = false;
             this.btnKahvalti6.Click += new System.EventHandler(this.btnKahvalti6_Click);
             // 
             // btnFirin7
             // 
+            this.btnFirin7.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirin7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFirin7.BackgroundImage")));
+            this.btnFirin7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFirin7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFirin7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFirin7.Location = new System.Drawing.Point(6, 240);
             this.btnFirin7.Name = "btnFirin7";
             this.btnFirin7.Size = new System.Drawing.Size(113, 63);
             this.btnFirin7.TabIndex = 0;
-            this.btnFirin7.Text = "Fırın Ürünleri";
-            this.btnFirin7.UseVisualStyleBackColor = true;
+            this.btnFirin7.UseVisualStyleBackColor = false;
             this.btnFirin7.Click += new System.EventHandler(this.btnFirin7_Click);
             // 
             // btnBalik8
             // 
+            this.btnBalik8.BackColor = System.Drawing.Color.Transparent;
+            this.btnBalik8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBalik8.BackgroundImage")));
+            this.btnBalik8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBalik8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBalik8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBalik8.Location = new System.Drawing.Point(125, 240);
             this.btnBalik8.Name = "btnBalik8";
             this.btnBalik8.Size = new System.Drawing.Size(113, 63);
             this.btnBalik8.TabIndex = 0;
-            this.btnBalik8.Text = "Balıklar";
-            this.btnBalik8.UseVisualStyleBackColor = true;
+            this.btnBalik8.UseVisualStyleBackColor = false;
             this.btnBalik8.Click += new System.EventHandler(this.btnBalik8_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.BackColor = System.Drawing.Color.Orange;
             this.groupBox1.Controls.Add(this.btnAnaYemek1);
             this.groupBox1.Controls.Add(this.btnBalik8);
             this.groupBox1.Controls.Add(this.btnSalata3);
@@ -200,7 +217,7 @@
             this.groupBox1.Controls.Add(this.btnİcecek4);
             this.groupBox1.Controls.Add(this.btnTatlilar5);
             this.groupBox1.Controls.Add(this.btnFirin7);
-            this.groupBox1.Location = new System.Drawing.Point(53, 41);
+            this.groupBox1.Location = new System.Drawing.Point(141, 76);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(245, 316);
             this.groupBox1.TabIndex = 1;
@@ -210,7 +227,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lvMenu);
-            this.groupBox2.Location = new System.Drawing.Point(323, 132);
+            this.groupBox2.Location = new System.Drawing.Point(411, 167);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(433, 169);
             this.groupBox2.TabIndex = 2;
@@ -251,7 +268,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lvSiparisler);
-            this.groupBox3.Location = new System.Drawing.Point(323, 307);
+            this.groupBox3.Location = new System.Drawing.Point(411, 342);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(433, 167);
             this.groupBox3.TabIndex = 2;
@@ -275,6 +292,7 @@
             this.lvSiparisler.TabIndex = 0;
             this.lvSiparisler.UseCompatibleStateImageBehavior = false;
             this.lvSiparisler.View = System.Windows.Forms.View.Details;
+            this.lvSiparisler.DoubleClick += new System.EventHandler(this.lvSiparisler_DoubleClick_1);
             // 
             // columnHeader4
             // 
@@ -308,7 +326,7 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(762, 89);
+            this.btn1.Location = new System.Drawing.Point(850, 124);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(94, 55);
             this.btn1.TabIndex = 3;
@@ -317,7 +335,7 @@
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(862, 89);
+            this.btn2.Location = new System.Drawing.Point(950, 124);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(92, 55);
             this.btn2.TabIndex = 3;
@@ -326,7 +344,7 @@
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(960, 89);
+            this.btn3.Location = new System.Drawing.Point(1048, 124);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(86, 55);
             this.btn3.TabIndex = 3;
@@ -335,7 +353,7 @@
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(762, 150);
+            this.btn4.Location = new System.Drawing.Point(850, 185);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(94, 55);
             this.btn4.TabIndex = 3;
@@ -344,7 +362,7 @@
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(862, 150);
+            this.btn5.Location = new System.Drawing.Point(950, 185);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(92, 55);
             this.btn5.TabIndex = 3;
@@ -353,7 +371,7 @@
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(960, 150);
+            this.btn6.Location = new System.Drawing.Point(1048, 185);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(86, 55);
             this.btn6.TabIndex = 3;
@@ -362,7 +380,7 @@
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(762, 211);
+            this.btn7.Location = new System.Drawing.Point(850, 246);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(94, 55);
             this.btn7.TabIndex = 3;
@@ -371,7 +389,7 @@
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(862, 211);
+            this.btn8.Location = new System.Drawing.Point(950, 246);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(92, 55);
             this.btn8.TabIndex = 3;
@@ -380,7 +398,7 @@
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(960, 211);
+            this.btn9.Location = new System.Drawing.Point(1048, 246);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(86, 55);
             this.btn9.TabIndex = 3;
@@ -389,7 +407,7 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(762, 272);
+            this.btnTemizle.Location = new System.Drawing.Point(850, 307);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(192, 55);
             this.btnTemizle.TabIndex = 3;
@@ -398,7 +416,7 @@
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(960, 272);
+            this.btn0.Location = new System.Drawing.Point(1048, 307);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(86, 55);
             this.btn0.TabIndex = 3;
@@ -407,7 +425,7 @@
             // 
             // txtAdet
             // 
-            this.txtAdet.Location = new System.Drawing.Point(762, 36);
+            this.txtAdet.Location = new System.Drawing.Point(850, 71);
             this.txtAdet.Multiline = true;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(284, 47);
@@ -417,7 +435,7 @@
             // 
             this.btnOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdeme.Location = new System.Drawing.Point(762, 333);
+            this.btnOdeme.Location = new System.Drawing.Point(850, 368);
             this.btnOdeme.Name = "btnOdeme";
             this.btnOdeme.Size = new System.Drawing.Size(143, 63);
             this.btnOdeme.TabIndex = 0;
@@ -429,7 +447,7 @@
             // 
             this.btnSiparis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiparis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSiparis.Location = new System.Drawing.Point(911, 333);
+            this.btnSiparis.Location = new System.Drawing.Point(999, 368);
             this.btnSiparis.Name = "btnSiparis";
             this.btnSiparis.Size = new System.Drawing.Size(135, 63);
             this.btnSiparis.TabIndex = 0;
@@ -441,7 +459,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(828, 402);
+            this.button3.Location = new System.Drawing.Point(916, 437);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 63);
             this.button3.TabIndex = 0;
@@ -456,7 +474,7 @@
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14});
-            this.lvYeniEklenenler.Location = new System.Drawing.Point(59, 363);
+            this.lvYeniEklenenler.Location = new System.Drawing.Point(147, 398);
             this.lvYeniEklenenler.Name = "lvYeniEklenenler";
             this.lvYeniEklenenler.Size = new System.Drawing.Size(245, 134);
             this.lvYeniEklenenler.TabIndex = 5;
@@ -489,7 +507,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 41);
+            this.label1.Location = new System.Drawing.Point(406, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 24);
             this.label1.TabIndex = 6;
@@ -497,7 +515,7 @@
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(423, 36);
+            this.txtAra.Location = new System.Drawing.Point(511, 71);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(157, 28);
             this.txtAra.TabIndex = 7;
@@ -505,33 +523,51 @@
             // 
             // btnGeriDon
             // 
-            this.btnGeriDon.Location = new System.Drawing.Point(1065, 313);
+            this.btnGeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeriDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeriDon.BackgroundImage")));
+            this.btnGeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGeriDon.Location = new System.Drawing.Point(242, 657);
             this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(148, 80);
+            this.btnGeriDon.Size = new System.Drawing.Size(77, 58);
             this.btnGeriDon.TabIndex = 8;
-            this.btnGeriDon.Text = "Geri Dön";
-            this.btnGeriDon.UseVisualStyleBackColor = true;
+            this.btnGeriDon.UseVisualStyleBackColor = false;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(1219, 313);
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackgroundImage = global::lokanta.Properties.Resources._1024px_Crystal_Clear_action_exit1;
+            this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCikis.Location = new System.Drawing.Point(147, 657);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(148, 80);
+            this.btnCikis.Size = new System.Drawing.Size(77, 58);
             this.btnCikis.TabIndex = 8;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::lokanta.Properties.Resources.tableicon;
-            this.button1.Location = new System.Drawing.Point(472, 89);
+            this.button1.BackgroundImage = global::lokanta.Properties.Resources.tablerezervasyon1;
+            this.button1.Location = new System.Drawing.Point(560, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 37);
             this.button1.TabIndex = 9;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Location = new System.Drawing.Point(633, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button1";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // frmSiparis
             // 
@@ -541,6 +577,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnGeriDon);
@@ -635,6 +672,7 @@
         private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

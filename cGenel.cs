@@ -8,7 +8,7 @@ namespace lokanta
 {
     class cGenel
     {
-        public string conString = ("Data Source=DESKTOP-K28KSTA\\SQLEXPRESS;Initial Catalog=lokantadb;Integrated Security=True"); 
+        public string conString = ("Data Source = DESKTOP-K28KSTA\\SQLEXPRESS;Initial Catalog = lokantadb; Integrated Security = True"); 
 
         public static int _personelId;  //static olma sebebi her yerden ulaşmak istememiz
         public static int _gorevId;
@@ -18,5 +18,7 @@ namespace lokanta
 
         public static int _ServisTurNo;
         public static string _AdisyonId;
+        public static int _musteriEkleme;
+        public static int _musteriId;
     }
 }

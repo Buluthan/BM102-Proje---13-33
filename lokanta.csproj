@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,9 +50,13 @@
     <Compile Include="cAdisyon.cs" />
     <Compile Include="cGenel.cs" />
     <Compile Include="cMasalar.cs" />
+    <Compile Include="cMusteriler.cs" />
+    <Compile Include="cOdeme.cs" />
+    <Compile Include="cPaketler.cs" />
     <Compile Include="cPersonelGorev.cs" />
     <Compile Include="cPersonelHareketleri.cs" />
     <Compile Include="cPersoneller.cs" />
+    <Compile Include="cRezervasyon.cs" />
     <Compile Include="cSiparis.cs" />
     <Compile Include="cUrunCesitleri.cs" />
     <Compile Include="cUrunler.cs" />
@@ -91,6 +96,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMusteriAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriAra.designer.cs">
+      <DependentUpon>frmMusteriAra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMusteriler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +138,12 @@
     <Compile Include="frmSiparis.Designer.cs">
       <DependentUpon>frmSiparis.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusteriEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriEkleme.Designer.cs">
+      <DependentUpon>MusteriEkleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBill.resx">
@@ -141,17 +158,29 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriAra.resx">
+      <DependentUpon>frmMusteriAra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriler.resx">
       <DependentUpon>frmMusteriler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMutfak.resx">
       <DependentUpon>frmMutfak.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRaporlar.resx">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRezervasyon.resx">
+      <DependentUpon>frmRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSiparis.resx">
       <DependentUpon>frmSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriEkleme.resx">
+      <DependentUpon>MusteriEkleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,6 +210,9 @@
     <Content Include="NewFolder1\images\1024px-Crystal_Clear_action_exit.svg.png" />
     <Content Include="NewFolder1\images\1506874_o97b4.png" />
     <Content Include="NewFolder1\images\871735_table_512x512.png" />
+    <Content Include="NewFolder1\images\tablebos.png" />
+    <Content Include="NewFolder1\images\tabledolu.png" />
+    <Content Include="NewFolder1\images\tablerezervasyon.png" />
     <Content Include="Properties\background.png" />
     <Content Include="NewFolder1\images\bankakasadurumu.png" />
     <Content Include="NewFolder1\images\beymoy-giris-yapma.jpg" />
@@ -197,6 +229,17 @@
     <Content Include="NewFolder1\images\siparis-nasl-verilir-.png" />
     <Content Include="NewFolder1\images\table.png" />
     <Content Include="NewFolder1\images\çıkış-icon-png-3.png" />
+    <Content Include="Resources\tablebos.png" />
+    <None Include="Resources\tablerezervasyon2.png" />
+    <None Include="Resources\tablerezervasyon1.png" />
+    <None Include="Resources\tablebos1.png" />
+    <None Include="Resources\tablebos2.png" />
+    <Content Include="Resources\tabledolu.png" />
+    <None Include="Resources\tabledolu1.png" />
+    <None Include="Resources\tablemusterigelmemis.png" />
+    <None Include="Resources\tabledolu2.png" />
+    <None Include="Resources\tablemusterigelmemis1.png" />
+    <Content Include="Resources\tablerezervasyon.png" />
     <None Include="Resources\tableicon.png" />
     <None Include="Resources\dolumasa.png" />
     <None Include="Resources\bosmasa.png" />

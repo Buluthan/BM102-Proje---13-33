@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace lokanta
 {
@@ -16,6 +17,7 @@ namespace lokanta
         private int _SERVISTURU;
         private int _DURUM;
         private int _ONAY;
+        private string _MasaBilgi;
         #endregion
 
         #region Properties
@@ -24,6 +26,7 @@ namespace lokanta
         public int SERVISTURU { get => _SERVISTURU; set => _SERVISTURU = value; }
         public int DURUM { get => _DURUM; set => _DURUM = value; }
         public int ONAY { get => _ONAY; set => _ONAY = value; }
+        public string MasaBilgi { get => _MasaBilgi; set => _MasaBilgi = value; }
 
         #endregion
 
@@ -58,13 +61,11 @@ namespace lokanta
                     con.Open();
                 }
                 result = Convert.ToBoolean(cmd.ExecuteScalar());
-
             }
             catch (SqlException ex)
             {
                 string hata = ex.Message;
-
-              }
+            }
             finally
             {
                 
@@ -105,7 +106,7 @@ namespace lokanta
 
 
         cGenel gnl = new cGenel();
-        public string SessionSum(int state, string masaId)  // ,string masaId        bu da vardı int statenin yanında bi bak
+        public string SessionSum(int state, string masaId)  // string masaId bu da vardı int statenin yanında bi bak
         {
             string dt = "";
             SqlConnection con = new SqlConnection(gnl.conString);
@@ -140,6 +141,42 @@ namespace lokanta
             return dt;
         }
 
+        public void MasaKapasitesiveDurumuGetir(ComboBox cm)
+        {
+            cm.Items.Clear();
+            string durum = "";
+            SqlConnection con = new SqlConnection(gnl.conString);
+            SqlCommand cmd = new SqlCommand("select * from masalar", con);
 
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cMasalar c = new cMasalar();
+                if (c._DURUM == 2)
+                    durum = "DOLU";
+                else if (c._DURUM == 3)
+                    durum = "Rezerve";
+                c._KAPASITE = Convert.ToInt32(dr["KAPASITE"]);
+                c._MasaBilgi = "Masa No: " + dr["ID"].ToString() + " Kapasitesi :" + dr["KAPASITE"].ToString();
+                c._ID = Convert.ToInt32(dr["ID"]);
+                cm.Items.Add(c);
+            }
+
+            dr.Close();
+            con.Dispose();
+            con.Close();
+
+        }
+
+        public override string ToString()
+        {
+            return MasaBilgi;
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace lokanta
         private int _ServisTurNo;
         private decimal _Tutar;
         private DateTime _Tarih;
-        private int _PersonalId;
+        private int _PersonelId;
         private int _Durum;
         private int _MasaId;
         #endregion
@@ -44,10 +44,10 @@ namespace lokanta
             get { return _Tarih; }
             set { _Tarih = value; }
         }
-        public int PersonalId
+        public int PersonelId
         {
-            get { return _PersonalId; }
-            set { _PersonalId = value; }
+            get { return _PersonelId; }
+            set { _PersonelId = value; }
         }
         public int Durum
         {
@@ -60,10 +60,6 @@ namespace lokanta
             set { _MasaId = value; }
         }
         #endregion
-
-
-
-        //Properties nasl ekleniyor?
 
         public int getByAddition(int MasaId)
         {
@@ -97,7 +93,7 @@ namespace lokanta
             bool sonuc = false;
 
             SqlConnection con = new SqlConnection(gnl.conString);
-            SqlCommand cmd = new SqlCommand("Insert Into Adisyonlar(SERVISTURNO,TARIH,PERSONALID,MASAID,DURUM) values(@ServisTurNo,@Tarih,@PersonalID,@MasaId,@Durum)", con);
+            SqlCommand cmd = new SqlCommand("Insert Into Adisyonlar(SERVISTURNO,TARIH,PERSONELID,MASAID,DURUM) values(@ServisTurNo,@Tarih,@PersonelID,@MasaId,@Durum)", con);
             try
             {
                 if (con.State == ConnectionState.Closed)
@@ -107,7 +103,7 @@ namespace lokanta
 
                 cmd.Parameters.Add("@ServisTurNo", SqlDbType.Int).Value =Bilgiler.ServisTurNo;
                 cmd.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = Bilgiler.Tarih;  
-                cmd.Parameters.Add("@PersonalID", SqlDbType.Int).Value = Bilgiler.PersonalId;     // bunlara bir bak _PersonelID  mi olcak diye
+                cmd.Parameters.Add("@PersonelID", SqlDbType.Int).Value = Bilgiler.PersonelId;     
                 cmd.Parameters.Add("@MasaId", SqlDbType.Int).Value = Bilgiler.MasaId;
                 cmd.Parameters.Add("@Durum", SqlDbType.Bit).Value = 0;
                 sonuc = Convert.ToBoolean(cmd.ExecuteNonQuery());
@@ -124,6 +120,73 @@ namespace lokanta
             return sonuc;
         }
 
+        public int RezervasyonAdisyonAc(cAdisyon bilgiler)
+        {
 
+            int sonuc = 0;
+            SqlConnection con = new SqlConnection(gnl.conString);
+            SqlCommand cmd = new SqlCommand("Insert Into Adisyonlar(SERVISTURNO,TARIH,PERSONELID,MASAID) values (@ServisTurNo,@Tarih,@PersonelID,@MasaId); select scope_IDENTITY()",con);
+
+            try
+            {
+
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                cmd.Parameters.Add("@ServisTurNo", SqlDbType.Int).Value = bilgiler.ServisTurNo;
+                cmd.Parameters.Add("@Tarih", SqlDbType.DateTime).Value = bilgiler.Tarih;
+                cmd.Parameters.Add("@PersonelID", SqlDbType.Int).Value = bilgiler.PersonelId;
+                cmd.Parameters.Add("@MasaId", SqlDbType.Int).Value = bilgiler.MasaId;
+
+                sonuc = Convert.ToInt32(cmd.ExecuteScalar());
+
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+
+            }
+            finally
+            {
+                con.Dispose();
+                con.Close();
+            }
+            return sonuc;
+        }
+
+        public void adisyonkapat(int adisyonID, int durum)
+        {
+
+
+            SqlConnection con = new SqlConnection(gnl.conString);
+            SqlCommand cmd = new SqlCommand("Update adisyonlar set durum =@durum where ID=@adisyonId", con);
+
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                cmd.Parameters.Add("adisyonId", SqlDbType.Int).Value = adisyonID;
+                cmd.Parameters.Add("durum ", SqlDbType.Int).Value = durum;
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                string hata = ex.Message;
+                throw;
+            }
+
+            finally
+            {
+                con.Dispose();
+                con.Close();
+            }
+
+
+        }
     }
 }
+

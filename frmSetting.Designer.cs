@@ -97,7 +97,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(12, 23);
+            this.groupBox1.Location = new System.Drawing.Point(326, 219);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(317, 304);
             this.groupBox1.TabIndex = 0;
@@ -106,21 +106,24 @@
             // lblBilgi
             // 
             this.lblBilgi.AutoSize = true;
+            this.lblBilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBilgi.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblBilgi.Location = new System.Drawing.Point(17, 0);
+            this.lblBilgi.Location = new System.Drawing.Point(0, 22);
             this.lblBilgi.Name = "lblBilgi";
-            this.lblBilgi.Size = new System.Drawing.Size(162, 29);
+            this.lblBilgi.Size = new System.Drawing.Size(103, 16);
             this.lblBilgi.TabIndex = 4;
             this.lblBilgi.Text = "GİRİS YAPAN";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(154, 226);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 41);
             this.button1.TabIndex = 3;
             this.button1.Text = "DEĞİŞTİR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbPersonel
@@ -196,7 +199,7 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(355, 23);
+            this.groupBox2.Location = new System.Drawing.Point(669, 219);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(412, 367);
             this.groupBox2.TabIndex = 0;
@@ -205,51 +208,60 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Maroon;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(10, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(358, 29);
+            this.label10.Size = new System.Drawing.Size(230, 16);
             this.label10.TabIndex = 13;
             this.label10.Text = "Not: Şifre en az 6  hane içermeli.";
             // 
             // btnBilgiDegistir
             // 
+            this.btnBilgiDegistir.BackColor = System.Drawing.Color.Aqua;
+            this.btnBilgiDegistir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBilgiDegistir.Location = new System.Drawing.Point(174, 320);
             this.btnBilgiDegistir.Name = "btnBilgiDegistir";
             this.btnBilgiDegistir.Size = new System.Drawing.Size(141, 41);
             this.btnBilgiDegistir.TabIndex = 12;
             this.btnBilgiDegistir.Text = "DEĞİŞTİR";
-            this.btnBilgiDegistir.UseVisualStyleBackColor = true;
+            this.btnBilgiDegistir.UseVisualStyleBackColor = false;
             this.btnBilgiDegistir.Click += new System.EventHandler(this.btnBilgiDegistir_Click);
             // 
             // btnSil
             // 
+            this.btnSil.BackColor = System.Drawing.Color.Red;
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSil.Location = new System.Drawing.Point(15, 320);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(141, 41);
             this.btnSil.TabIndex = 11;
             this.btnSil.Text = "SİL";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
+            this.btnEkle.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEkle.Location = new System.Drawing.Point(174, 273);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(141, 41);
             this.btnEkle.TabIndex = 10;
             this.btnEkle.Text = "KAYDET";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnYeni
             // 
+            this.btnYeni.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnYeni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnYeni.Location = new System.Drawing.Point(15, 273);
             this.btnYeni.Name = "btnYeni";
             this.btnYeni.Size = new System.Drawing.Size(141, 41);
             this.btnYeni.TabIndex = 9;
             this.btnYeni.Text = "YENİ";
-            this.btnYeni.UseVisualStyleBackColor = true;
+            this.btnYeni.UseVisualStyleBackColor = false;
             this.btnYeni.Click += new System.EventHandler(this.btnYeni_Click);
             // 
             // label7
@@ -369,7 +381,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(789, 23);
+            this.groupBox3.Location = new System.Drawing.Point(1103, 219);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(317, 304);
             this.groupBox3.TabIndex = 1;
@@ -377,12 +389,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(154, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 41);
             this.button2.TabIndex = 15;
             this.button2.Text = "DEĞİŞTİR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
@@ -427,9 +441,9 @@
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCikis.ForeColor = System.Drawing.Color.White;
-            this.btnCikis.Location = new System.Drawing.Point(21, 505);
+            this.btnCikis.Location = new System.Drawing.Point(221, 704);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(53, 42);
+            this.btnCikis.Size = new System.Drawing.Size(77, 58);
             this.btnCikis.TabIndex = 16;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
@@ -442,9 +456,9 @@
             this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGeriDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGeriDon.ForeColor = System.Drawing.Color.White;
-            this.btnGeriDon.Location = new System.Drawing.Point(79, 505);
+            this.btnGeriDon.Location = new System.Drawing.Point(304, 704);
             this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(53, 42);
+            this.btnGeriDon.Size = new System.Drawing.Size(77, 58);
             this.btnGeriDon.TabIndex = 17;
             this.btnGeriDon.UseVisualStyleBackColor = false;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
@@ -500,7 +514,7 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.lvPersoneller);
-            this.groupBox4.Location = new System.Drawing.Point(355, 385);
+            this.groupBox4.Location = new System.Drawing.Point(669, 581);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(445, 165);
             this.groupBox4.TabIndex = 5;
@@ -511,7 +525,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1118, 552);
+            this.ClientSize = new System.Drawing.Size(1502, 822);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnGeriDon);
             this.Controls.Add(this.groupBox3);

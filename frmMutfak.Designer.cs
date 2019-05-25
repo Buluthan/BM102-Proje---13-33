@@ -75,7 +75,7 @@
             this.columnHeader8});
             this.lvKategoriler.FullRowSelect = true;
             this.lvKategoriler.GridLines = true;
-            this.lvKategoriler.Location = new System.Drawing.Point(12, 294);
+            this.lvKategoriler.Location = new System.Drawing.Point(1012, 542);
             this.lvKategoriler.Name = "lvKategoriler";
             this.lvKategoriler.Size = new System.Drawing.Size(402, 235);
             this.lvKategoriler.TabIndex = 0;
@@ -107,7 +107,7 @@
             this.columnHeader3});
             this.lvGidaListesi.FullRowSelect = true;
             this.lvGidaListesi.GridLines = true;
-            this.lvGidaListesi.Location = new System.Drawing.Point(431, 294);
+            this.lvGidaListesi.Location = new System.Drawing.Point(537, 542);
             this.lvGidaListesi.Name = "lvGidaListesi";
             this.lvGidaListesi.Size = new System.Drawing.Size(450, 235);
             this.lvGidaListesi.TabIndex = 0;
@@ -142,50 +142,63 @@
             // 
             // btnEkle
             // 
+            this.btnEkle.BackColor = System.Drawing.Color.Transparent;
+            this.btnEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEkle.BackgroundImage")));
+            this.btnEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEkle.Location = new System.Drawing.Point(12, 215);
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Location = new System.Drawing.Point(535, 436);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(98, 57);
+            this.btnEkle.Size = new System.Drawing.Size(148, 80);
             this.btnEkle.TabIndex = 1;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnDegistir
             // 
+            this.btnDegistir.BackColor = System.Drawing.Color.Transparent;
+            this.btnDegistir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDegistir.BackgroundImage")));
+            this.btnDegistir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDegistir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDegistir.Location = new System.Drawing.Point(153, 215);
+            this.btnDegistir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDegistir.Location = new System.Drawing.Point(709, 436);
             this.btnDegistir.Name = "btnDegistir";
-            this.btnDegistir.Size = new System.Drawing.Size(96, 57);
+            this.btnDegistir.Size = new System.Drawing.Size(148, 80);
             this.btnDegistir.TabIndex = 1;
-            this.btnDegistir.Text = "Değiştir";
-            this.btnDegistir.UseVisualStyleBackColor = true;
+            this.btnDegistir.UseVisualStyleBackColor = false;
             this.btnDegistir.Click += new System.EventHandler(this.btnDegistir_Click);
             // 
             // btnBul
             // 
+            this.btnBul.BackColor = System.Drawing.Color.Transparent;
+            this.btnBul.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBul.BackgroundImage")));
+            this.btnBul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBul.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBul.Location = new System.Drawing.Point(303, 215);
+            this.btnBul.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBul.Location = new System.Drawing.Point(884, 436);
             this.btnBul.Name = "btnBul";
-            this.btnBul.Size = new System.Drawing.Size(95, 57);
+            this.btnBul.Size = new System.Drawing.Size(148, 80);
             this.btnBul.TabIndex = 1;
-            this.btnBul.Text = "Bul";
-            this.btnBul.UseVisualStyleBackColor = true;
+            this.btnBul.UseVisualStyleBackColor = false;
             this.btnBul.Click += new System.EventHandler(this.btnBul_Click);
             // 
             // btnSil
             // 
+            this.btnSil.BackColor = System.Drawing.Color.Transparent;
+            this.btnSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSil.BackgroundImage")));
+            this.btnSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSil.Location = new System.Drawing.Point(449, 215);
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Location = new System.Drawing.Point(1063, 436);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(96, 57);
+            this.btnSil.Size = new System.Drawing.Size(148, 80);
             this.btnSil.TabIndex = 1;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // panelUrun
             // 
+            this.panelUrun.BackColor = System.Drawing.Color.Orange;
             this.panelUrun.Controls.Add(this.txtGidaFiyati);
             this.panelUrun.Controls.Add(this.txtGidaAdi);
             this.panelUrun.Controls.Add(this.cbKategoriler);
@@ -193,7 +206,7 @@
             this.panelUrun.Controls.Add(this.label2);
             this.panelUrun.Controls.Add(this.label1);
             this.panelUrun.Controls.Add(this.txtUrunId);
-            this.panelUrun.Location = new System.Drawing.Point(12, 58);
+            this.panelUrun.Location = new System.Drawing.Point(537, 265);
             this.panelUrun.Name = "panelUrun";
             this.panelUrun.Size = new System.Drawing.Size(282, 151);
             this.panelUrun.TabIndex = 2;
@@ -257,12 +270,13 @@
             // 
             // panelAnakategori
             // 
+            this.panelAnakategori.BackColor = System.Drawing.Color.Orange;
             this.panelAnakategori.Controls.Add(this.txtAciklama);
             this.panelAnakategori.Controls.Add(this.txtKategoriAd);
             this.panelAnakategori.Controls.Add(this.label5);
             this.panelAnakategori.Controls.Add(this.label4);
             this.panelAnakategori.Controls.Add(this.txtKategoriID);
-            this.panelAnakategori.Location = new System.Drawing.Point(302, 58);
+            this.panelAnakategori.Location = new System.Drawing.Point(827, 265);
             this.panelAnakategori.Name = "panelAnakategori";
             this.panelAnakategori.Size = new System.Drawing.Size(282, 151);
             this.panelAnakategori.TabIndex = 2;
@@ -309,38 +323,44 @@
             // rbAltkategori
             // 
             this.rbAltkategori.AutoSize = true;
-            this.rbAltkategori.Location = new System.Drawing.Point(32, 35);
+            this.rbAltkategori.BackColor = System.Drawing.Color.Transparent;
+            this.rbAltkategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbAltkategori.ForeColor = System.Drawing.Color.White;
+            this.rbAltkategori.Location = new System.Drawing.Point(557, 242);
             this.rbAltkategori.Name = "rbAltkategori";
-            this.rbAltkategori.Size = new System.Drawing.Size(72, 17);
+            this.rbAltkategori.Size = new System.Drawing.Size(93, 20);
             this.rbAltkategori.TabIndex = 3;
             this.rbAltkategori.TabStop = true;
             this.rbAltkategori.Text = "Ürün Ekle";
-            this.rbAltkategori.UseVisualStyleBackColor = true;
+            this.rbAltkategori.UseVisualStyleBackColor = false;
             this.rbAltkategori.CheckedChanged += new System.EventHandler(this.rbAltkategori_CheckedChanged);
             // 
             // rbAnaKategori
             // 
             this.rbAnaKategori.AutoSize = true;
-            this.rbAnaKategori.Location = new System.Drawing.Point(334, 35);
+            this.rbAnaKategori.BackColor = System.Drawing.Color.Transparent;
+            this.rbAnaKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbAnaKategori.ForeColor = System.Drawing.Color.White;
+            this.rbAnaKategori.Location = new System.Drawing.Point(859, 242);
             this.rbAnaKategori.Name = "rbAnaKategori";
-            this.rbAnaKategori.Size = new System.Drawing.Size(114, 17);
+            this.rbAnaKategori.Size = new System.Drawing.Size(155, 20);
             this.rbAnaKategori.TabIndex = 3;
             this.rbAnaKategori.TabStop = true;
             this.rbAnaKategori.Text = "Ürün Kategori Ekle";
-            this.rbAnaKategori.UseVisualStyleBackColor = true;
+            this.rbAnaKategori.UseVisualStyleBackColor = false;
             this.rbAnaKategori.CheckedChanged += new System.EventHandler(this.rbAnaKategori_CheckedChanged);
             // 
             // btnCikis
             // 
             this.btnCikis.BackColor = System.Drawing.Color.Transparent;
-            this.btnCikis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCikis.BackgroundImage")));
+            this.btnCikis.BackgroundImage = global::lokanta.Properties.Resources._1024px_Crystal_Clear_action_exit1;
             this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCikis.ForeColor = System.Drawing.Color.White;
-            this.btnCikis.Location = new System.Drawing.Point(922, 487);
+            this.btnCikis.Location = new System.Drawing.Point(537, 890);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(53, 42);
+            this.btnCikis.Size = new System.Drawing.Size(77, 58);
             this.btnCikis.TabIndex = 4;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
@@ -353,16 +373,16 @@
             this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGeriDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGeriDon.ForeColor = System.Drawing.Color.White;
-            this.btnGeriDon.Location = new System.Drawing.Point(980, 487);
+            this.btnGeriDon.Location = new System.Drawing.Point(620, 890);
             this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(53, 42);
+            this.btnGeriDon.Size = new System.Drawing.Size(77, 58);
             this.btnGeriDon.TabIndex = 5;
             this.btnGeriDon.UseVisualStyleBackColor = false;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
             // txtArama
             // 
-            this.txtArama.Location = new System.Drawing.Point(609, 174);
+            this.txtArama.Location = new System.Drawing.Point(1134, 381);
             this.txtArama.Name = "txtArama";
             this.txtArama.Size = new System.Drawing.Size(178, 20);
             this.txtArama.TabIndex = 6;
@@ -371,9 +391,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(606, 155);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1131, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 13);
+            this.label6.Size = new System.Drawing.Size(179, 16);
             this.label6.TabIndex = 7;
             this.label6.Text = "Aramak İstediğiniz Ürün :";
             // 
@@ -381,7 +405,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 619);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1609, 1002);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.btnCikis);
@@ -398,7 +424,9 @@
             this.Controls.Add(this.lvKategoriler);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMutfak";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmmutfak";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMutfak_Load);
             this.panelUrun.ResumeLayout(false);
             this.panelUrun.PerformLayout();

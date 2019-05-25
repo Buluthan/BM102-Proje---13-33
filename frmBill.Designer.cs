@@ -59,7 +59,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnGeriDon = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblAdisyonId = new System.Windows.Forms.Label();
@@ -71,10 +70,11 @@
             // 
             // gbIndirim
             // 
+            this.gbIndirim.BackColor = System.Drawing.Color.Orange;
             this.gbIndirim.Controls.Add(this.txtIndirimTutari);
             this.gbIndirim.Controls.Add(this.label9);
             this.gbIndirim.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbIndirim.Location = new System.Drawing.Point(777, 72);
+            this.gbIndirim.Location = new System.Drawing.Point(865, 115);
             this.gbIndirim.Margin = new System.Windows.Forms.Padding(2);
             this.gbIndirim.Name = "gbIndirim";
             this.gbIndirim.Padding = new System.Windows.Forms.Padding(2);
@@ -106,9 +106,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Orange;
             this.groupBox2.Controls.Add(this.chkIndirim);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(489, 72);
+            this.groupBox2.Location = new System.Drawing.Point(577, 115);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -131,6 +132,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Orange;
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.lblOdenecek);
@@ -144,7 +146,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.lblIndirim);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox3.Location = new System.Drawing.Point(489, 158);
+            this.groupBox3.Location = new System.Drawing.Point(577, 201);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -276,11 +278,12 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Orange;
             this.groupBox4.Controls.Add(this.rbTicket);
             this.groupBox4.Controls.Add(this.rbKrediKarti);
             this.groupBox4.Controls.Add(this.rbNakit);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox4.Location = new System.Drawing.Point(777, 188);
+            this.groupBox4.Location = new System.Drawing.Point(865, 231);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -304,7 +307,7 @@
             // rbKrediKarti
             // 
             this.rbKrediKarti.AutoSize = true;
-            this.rbKrediKarti.Location = new System.Drawing.Point(25, 67);
+            this.rbKrediKarti.Location = new System.Drawing.Point(25, 66);
             this.rbKrediKarti.Margin = new System.Windows.Forms.Padding(2);
             this.rbKrediKarti.Name = "rbKrediKarti";
             this.rbKrediKarti.Size = new System.Drawing.Size(124, 28);
@@ -335,10 +338,10 @@
             this.columnHeader5});
             this.lvUrunler.FullRowSelect = true;
             this.lvUrunler.GridLines = true;
-            this.lvUrunler.Location = new System.Drawing.Point(23, 53);
+            this.lvUrunler.Location = new System.Drawing.Point(112, 115);
             this.lvUrunler.Margin = new System.Windows.Forms.Padding(2);
             this.lvUrunler.Name = "lvUrunler";
-            this.lvUrunler.Size = new System.Drawing.Size(267, 230);
+            this.lvUrunler.Size = new System.Drawing.Size(290, 230);
             this.lvUrunler.TabIndex = 1;
             this.lvUrunler.UseCompatibleStateImageBehavior = false;
             this.lvUrunler.View = System.Windows.Forms.View.Details;
@@ -367,63 +370,70 @@
             // 
             // btnGeriDon
             // 
-            this.btnGeriDon.Location = new System.Drawing.Point(33, 306);
+            this.btnGeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeriDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeriDon.BackgroundImage")));
+            this.btnGeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeriDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGeriDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeriDon.Location = new System.Drawing.Point(219, 515);
             this.btnGeriDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnGeriDon.Name = "btnGeriDon";
-            this.btnGeriDon.Size = new System.Drawing.Size(56, 35);
+            this.btnGeriDon.Size = new System.Drawing.Size(77, 58);
             this.btnGeriDon.TabIndex = 2;
-            this.btnGeriDon.Text = "Geri Dön";
-            this.btnGeriDon.UseVisualStyleBackColor = true;
+            this.btnGeriDon.UseVisualStyleBackColor = false;
             this.btnGeriDon.Click += new System.EventHandler(this.btnGeriDon_Click);
             // 
             // btnCikis
             // 
-            this.btnCikis.Location = new System.Drawing.Point(106, 306);
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackgroundImage = global::lokanta.Properties.Resources._1024px_Crystal_Clear_action_exit1;
+            this.btnCikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCikis.Location = new System.Drawing.Point(127, 515);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(2);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(56, 35);
+            this.btnCikis.Size = new System.Drawing.Size(77, 58);
             this.btnCikis.TabIndex = 2;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(620, 354);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 45);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Hesap Özeti";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(680, 354);
+            this.button4.BackColor = System.Drawing.Color.Aqua;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.Location = new System.Drawing.Point(626, 397);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 45);
+            this.button4.Size = new System.Drawing.Size(198, 45);
             this.button4.TabIndex = 2;
             this.button4.Text = "Hesap Kapat";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 37);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(109, 80);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(65, 16);
             this.label10.TabIndex = 0;
             this.label10.Text = "Siparişler";
             // 
             // lblAdisyonId
             // 
             this.lblAdisyonId.AutoSize = true;
-            this.lblAdisyonId.Location = new System.Drawing.Point(92, 37);
+            this.lblAdisyonId.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdisyonId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdisyonId.ForeColor = System.Drawing.Color.White;
+            this.lblAdisyonId.Location = new System.Drawing.Point(180, 80);
             this.lblAdisyonId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdisyonId.Name = "lblAdisyonId";
-            this.lblAdisyonId.Size = new System.Drawing.Size(16, 13);
+            this.lblAdisyonId.Size = new System.Drawing.Size(19, 16);
             this.lblAdisyonId.TabIndex = 0;
             this.lblAdisyonId.Text = "Id";
             // 
@@ -434,9 +444,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1011, 422);
+            this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnGeriDon);
             this.Controls.Add(this.lvUrunler);
@@ -497,7 +506,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button btnGeriDon;
         private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtIndirimTutari;
         private System.Windows.Forms.Label label9;

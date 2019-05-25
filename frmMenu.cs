@@ -42,7 +42,7 @@ namespace lokanta
 
         private void btnmusteriler_Click(object sender, EventArgs e)
         {
-            frmMusteriler frm = new frmMusteriler();
+            frmMusteriAra frm = new frmMusteriAra();
             this.Close();
             frm.Show();
         }
@@ -58,14 +58,6 @@ namespace lokanta
         private void btnmutfak_Click(object sender, EventArgs e)
         {
             frmMutfak frm = new frmMutfak();
-            this.Close();
-            frm.Show();
-
-        }
-
-        private void btnraporlar_Click(object sender, EventArgs e)
-        {
-            frmRaporlar frm = new frmRaporlar();
             this.Close();
             frm.Show();
 
@@ -89,6 +81,18 @@ namespace lokanta
         {
             if (MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Uyarı!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             { Application.Exit(); }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRaporlar_Click(object sender, EventArgs e)
+        {
+            frmRaporlar xxx = new frmRaporlar();
+            xxx.Show();
+            this.Hide();
         }
     }
 }

@@ -153,7 +153,7 @@ namespace lokanta
                              // durum 2 dolu demek
                         {
                           // bos masa resmi kısım
-                  item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.bosmasa);  //burda hata alıyoz video 12
+                  item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tablebos1);  //burda hata alıyoz video 12
                         }
                         else if(item.Name == "btnMasa" + dr["ID"].ToString() && dr["DURUM"].ToString() == "2")
                         {
@@ -170,16 +170,16 @@ namespace lokanta
                        //        fark.Days > 0 ? string.Format("{0} gün", fark.Days) : "",
                        //       fark.Hours > 0 ? string.Format("{0} Saat", fark.Hours) : "",
                        //          fark.Minutes > 0 ? string.Format("{0} Dakika", fark.Minutes) : "").Trim() + "\n\n\nMasa" + dr["ID"].ToString();
-                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.dolumasa);
+                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tabledolu1);
                         //    item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.dolumasa);   // dolu resmi
                         }
                         else if (item.Name == "btnMasa" + dr["ID"].ToString() && dr["durum"].ToString() == "3")
                         {
-                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.background);  //rezervasyon ama müşteri gelmiş anlamında
+                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tablerezervasyon1);  //rezervasyon ama müşteri gelmiş anlamında
                         }
                         else if (item.Name == "btnMasa" + dr["ID"].ToString() && dr["durum"].ToString() == "4")
                         {
-                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.bankakasadurumu);  //rezervasyon 
+                            item.BackgroundImage = (System.Drawing.Image)(Properties.Resources.tablemusterigelmemis1);  //rezervasyon 
                         }
                     }
                 }

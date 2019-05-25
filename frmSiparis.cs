@@ -26,7 +26,7 @@ namespace lokanta
         cUrunCesitleri Uc = new cUrunCesitleri();
 
         private void btnAnaYemek1_Click(object sender, EventArgs e)
-        {
+        { 
             Uc.getByProductTypes(lvMenu, btnAnaYemek1);
         }
 
@@ -81,7 +81,7 @@ namespace lokanta
                 lvSiparisler.Items[sayac].SubItems.Add((Convert.ToDecimal(lvMenu.SelectedItems[0].SubItems[1].Text) * Convert.ToDecimal(txtAdet.Text)).ToString());
                 lvSiparisler.Items[sayac].SubItems.Add("0");
                 sayac2 = lvYeniEklenenler.Items.Count;
-                lvSiparisler.Items[sayac].SubItems.Add(sayac2.ToString());
+                lvSiparisler.Items[sayac].SubItems.Add(sayac2.ToString()); // sayac2 deilde sayac mı olacak sadece
               
                 lvYeniEklenenler.Items.Add(AdditionId.ToString());
                 lvYeniEklenenler.Items[sayac2].SubItems.Add(lvMenu.SelectedItems[0].SubItems[2].Text);
@@ -119,7 +119,7 @@ namespace lokanta
                 newAddition.ServisTurNo = 1;
                 
 
-                newAddition.PersonalId = 1;
+                newAddition.PersonelId = 1;
                 newAddition.MasaId = tableId;
                 newAddition.Tarih = DateTime.Now;
                 sonuc = newAddition.setByAdditionNew(newAddition);
@@ -174,7 +174,7 @@ namespace lokanta
             {
                 
                 newAddition.ServisTurNo = 1;
-                newAddition.PersonalId = 1;
+                newAddition.PersonelId = 1;
                 newAddition.MasaId = tableId;
                 newAddition.Tarih = DateTime.Now;
                 sonuc = newAddition.setByAdditionNew(newAddition);
@@ -219,11 +219,13 @@ namespace lokanta
                             lvYeniEklenenler.Items.RemoveAt(i);
                         }
                     }
- 
+
+                   
                 }
+                lvSiparisler.Items.RemoveAt(lvSiparisler.SelectedItems[0].Index);
             }
 
-            lvSiparisler.Items.RemoveAt(lvSiparisler.SelectedItems[0].Index);
+           
         }
         
 
@@ -314,6 +316,7 @@ namespace lokanta
                     break;
             }
         }
+        
         private void frmSiparis_Load(object sender, EventArgs e)
         {
             // Murat gönderince kontorl et
@@ -354,6 +357,31 @@ namespace lokanta
         {
             if (MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Uyarı!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             { Application.Exit(); }
+        }
+
+        private void lvSiparisler_DoubleClick_1(object sender, EventArgs e)
+        {
+            if (lvSiparisler.Items.Count > 0 )
+            {
+                if(lvSiparisler.SelectedItems[0].SubItems[4].Text!="0")
+                {
+                    cSiparis saveOrder = new cSiparis();
+                    saveOrder.setDeleteOrder(Convert.ToInt32(lvSiparisler.SelectedItems[0].SubItems[4].Text));
+                 }
+                else
+                {
+                    for (int i = 0; i < lvYeniEklenenler.Items.Count; i++)
+                    {
+                        if(lvYeniEklenenler.Items[i].SubItems[4].Text==lvSiparisler.SelectedItems[0].SubItems[5].Text)
+                        {
+                            lvYeniEklenenler.Items.RemoveAt(i);
+                        }
+                    }
+                }
+                lvSiparisler.Items.RemoveAt(lvSiparisler.SelectedItems[0].Index);
+            }
+
+
         }
     }
     }
